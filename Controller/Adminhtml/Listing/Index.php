@@ -8,15 +8,15 @@ use Magento\Backend\App\Action as BackendAction;
 
 class Index extends BackendAction
 {
-
     /**
-     * @var \Genmato\ByteTraining\Controller\Adminhtml\\PageFactory
+     * @var PageFactory
      */
     protected $resultPageFactory;
+
     /**
      * Index constructor.
-     * @param \Genmato\ByteTraining\Controller\Adminhtml\\Context $context
-     * @param \Genmato\ByteTraining\Controller\Adminhtml\\PageFactory $resultPageFactory
+     * @param Context $context
+     * @param PageFactory $resultPageFactory
      */
     public function __construct(
         Context $context,
@@ -24,5 +24,15 @@ class Index extends BackendAction
     ) {
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
+    }
+
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Genmato_ByteTraining::listing');
+    }
+
+    public function execute()
+    {
+        return 'OK';
     }
 }

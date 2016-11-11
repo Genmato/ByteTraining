@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Genmato_ByteTraining::listing"
+             title="Training"
+             module="Genmato_ByteTraining"
+             sortOrder="10"
+             parent="Magento_Backend::marketing_communications"
+             action="training/listing"
+             resource="Genmato_ByteTraining::listing" />
+    </menu>
+</config>

@@ -8,6 +8,6 @@ class Collection extends AbstractCollection
 {
     protected function _construct()
     {
-        $this->_init('Genmato\ByteTraining\Model\Training', 'Genmato\Sample\Model\ResourceModel\Demo');
+        $this->_init('Genmato\ByteTraining\Model\Training', 'Genmato\ByteTraining\Model\ResourceModel\Training');
     }
 }

@@ -10,4 +10,12 @@ class Training extends AbstractDb
     {
         $this->_init('genmato_training', 'training_id');
     }
+
+    protected function _beforeSave(\Magento\Framework\Model\AbstractModel $object)
+    {
+        if (!$object->getId()) {
+            $object->setCreatedAt(time());
+        }
+        return parent::_beforeSave($object);
+    }
 }
