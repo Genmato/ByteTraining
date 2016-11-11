@@ -1,0 +1,14 @@
+{
+  "name": "genmato/module-bytetraining",
+  "description": "Byte Training Extension",
+  "type": "magento2-module",
+  "autoload": {
+    "files": ["registration.php"],
+    "psr-4": {
+      "Genmato\\ByteTraining\\": ""
+    }
+  },
+  "require": {
+    "magento/module-catalog": "101.0.*"
+  }
+}
